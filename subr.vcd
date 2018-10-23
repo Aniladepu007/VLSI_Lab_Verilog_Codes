@@ -1,0 +1,40 @@
+$date
+	Thu Oct 11 14:51:13 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module subr_tb $end
+$scope module subr_tb $end
+$var wire 32 ! a [31:0] $end
+$var wire 32 " b [31:0] $end
+$var wire 33 # sum [32:0] $end
+$var wire 32 $ result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 $
+b1 #
+b0 "
+b1 !
+$end
+#10
+b1001 $
+b1 "
+b1001 #
+b1010 !
+#20
+b0 $
+b1111110010 "
+b0 #
+b1111110010 !
+#30
+b1100101 $
+b10011100010000 "
+b1100101 #
+b10011101110101 !

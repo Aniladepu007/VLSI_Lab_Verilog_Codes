@@ -1,0 +1,35 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55cd083fc530 .scope module, "ternary_mux" "ternary_mux" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in1"
+    .port_info 1 /INPUT 1 "in2"
+    .port_info 2 /INPUT 1 "s"
+    .port_info 3 /OUTPUT 1 "y"
+L_0x7f7e09678138 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55cd083fc720_0 .net/2u *"_s10", 31 0, L_0x7f7e09678138;  1 drivers
+v0x55cd0841c680_0 .net *"_s12", 0 0, L_0x55cd0842cf10;  1 drivers
+v0x55cd0841c740_0 .net *"_s6", 31 0, L_0x55cd0841cd10;  1 drivers
+L_0x7f7e096780f0 .functor BUFT 1, C4<0000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55cd0841c800_0 .net *"_s9", 30 0, L_0x7f7e096780f0;  1 drivers
+L_0x7f7e09678060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55cd0841c8e0_0 .net "in1", 0 0, L_0x7f7e09678060;  1 drivers
+L_0x7f7e096780a8 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x55cd0841c9f0_0 .net "in2", 0 0, L_0x7f7e096780a8;  1 drivers
+L_0x7f7e09678018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55cd0841cab0_0 .net "s", 0 0, L_0x7f7e09678018;  1 drivers
+v0x55cd0841cb70_0 .net "y", 0 0, L_0x55cd0842d050;  1 drivers
+L_0x55cd0841cd10 .concat [ 1 31 0 0], L_0x7f7e09678018, L_0x7f7e096780f0;
+L_0x55cd0842cf10 .cmp/eq 32, L_0x55cd0841cd10, L_0x7f7e09678138;
+L_0x55cd0842d050 .functor MUXZ 1, L_0x7f7e096780a8, L_0x7f7e09678060, L_0x55cd0842cf10, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "ternary_mux.v";

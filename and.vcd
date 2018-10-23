@@ -1,0 +1,58 @@
+$date
+	Thu Sep  6 15:28:53 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tband $end
+$scope module tband $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # w $end
+$var wire 1 $ y $end
+$scope module nobj $end
+$var wire 1 # a $end
+$var wire 1 % gnd $end
+$var wire 1 & vdd $end
+$var wire 1 $ y $end
+$upscope $end
+$scope module obj $end
+$var wire 1 ' Gnd $end
+$var wire 1 ( Vdd $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 ) w $end
+$var wire 1 # y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+z)
+1(
+0'
+1&
+0%
+0$
+1#
+0"
+0!
+$end
+#20
+0)
+1"
+#30
+z)
+0"
+0$
+1#
+1!
+#40
+1$
+0#
+0)
+1"

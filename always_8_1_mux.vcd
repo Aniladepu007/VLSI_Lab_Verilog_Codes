@@ -1,0 +1,70 @@
+$date
+	Thu Sep 27 16:31:42 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_8_1mux $end
+$var wire 1 ! ybit $end
+$var reg 8 " inbit [7:0] $end
+$var reg 3 # sbit [2:0] $end
+$scope module obj $end
+$var wire 8 $ in [7:0] $end
+$var wire 3 % s [2:0] $end
+$var reg 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+b0 $
+bx #
+b0 "
+0!
+$end
+#10
+1!
+b0 #
+b0 %
+b1 "
+b1 $
+#20
+b1 #
+b1 %
+b10 "
+b10 $
+#30
+b10 #
+b10 %
+b100 "
+b100 $
+#40
+b11 #
+b11 %
+b1000 "
+b1000 $
+#50
+b100 #
+b100 %
+b10000 "
+b10000 $
+#60
+b101 #
+b101 %
+b100000 "
+b100000 $
+#70
+b110 #
+b110 %
+b1000000 "
+b1000000 $
+#80
+b111 #
+b111 %
+b10000000 "
+b10000000 $
+#100

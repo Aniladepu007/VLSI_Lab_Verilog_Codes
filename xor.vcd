@@ -1,0 +1,138 @@
+$date
+	Thu Sep  6 15:27:55 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tbxor $end
+$scope module tbxor $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # w1 $end
+$var wire 1 $ w2 $end
+$var wire 1 % w3 $end
+$var wire 1 & w4 $end
+$var wire 1 ' y $end
+$scope module o1 $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 ( w $end
+$var wire 1 # y $end
+$scope module nobj $end
+$var wire 1 ( a $end
+$var wire 1 ) gnd $end
+$var wire 1 * vdd $end
+$var wire 1 # y $end
+$upscope $end
+$scope module obj $end
+$var wire 1 + Gnd $end
+$var wire 1 , Vdd $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 - w $end
+$var wire 1 ( y $end
+$upscope $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 ! a $end
+$var wire 1 . gnd $end
+$var wire 1 / vdd $end
+$var wire 1 $ y $end
+$upscope $end
+$scope module o3 $end
+$var wire 1 " a $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vdd $end
+$var wire 1 % y $end
+$upscope $end
+$scope module o4 $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 2 w $end
+$var wire 1 & y $end
+$scope module nobj $end
+$var wire 1 2 a $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vdd $end
+$var wire 1 & y $end
+$upscope $end
+$scope module obj $end
+$var wire 1 5 Gnd $end
+$var wire 1 6 Vdd $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 7 w $end
+$var wire 1 2 y $end
+$upscope $end
+$upscope $end
+$scope module o5 $end
+$var wire 1 # a $end
+$var wire 1 & b $end
+$var wire 1 8 gnd $end
+$var wire 1 9 vdd $end
+$var wire 1 : w $end
+$var wire 1 ' y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1:
+19
+08
+07
+16
+05
+14
+03
+02
+11
+00
+1/
+0.
+z-
+1,
+0+
+1*
+0)
+1(
+0'
+1&
+1%
+1$
+0#
+0"
+0!
+$end
+#20
+0-
+1'
+0&
+12
+z7
+0%
+1"
+#30
+z-
+07
+1%
+0"
+1:
+1'
+0#
+1(
+0$
+1!
+#40
+z:
+0'
+1#
+0(
+0-
+z7
+0%
+1"

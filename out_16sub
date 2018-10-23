@@ -1,0 +1,74 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55be2c381030 .scope module, "subr_tb" "subr_tb" 2 1;
+ .timescale 0 0;
+v0x55be2c3a1c00_0 .var "abit", 31 0;
+v0x55be2c3a1cc0_0 .var "bbit", 31 0;
+v0x55be2c3a1d90_0 .net "res", 31 0, L_0x55be2c3a2590;  1 drivers
+S_0x55be2c3811b0 .scope module, "subr_tb" "subr" 2 5, 3 1 0, S_0x55be2c381030;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 32 "result"
+    .port_info 1 /INPUT 32 "a"
+    .port_info 2 /INPUT 32 "b"
+L_0x7f199aa46018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55be2c381330_0 .net/2u *"_s0", 0 0, L_0x7f199aa46018;  1 drivers
+v0x55be2c3a1290_0 .net *"_s11", 0 0, L_0x55be2c3a2260;  1 drivers
+v0x55be2c3a1370_0 .net *"_s13", 31 0, L_0x55be2c3a2380;  1 drivers
+v0x55be2c3a1430_0 .net *"_s15", 31 0, L_0x55be2c3a2420;  1 drivers
+v0x55be2c3a1510_0 .net *"_s2", 32 0, L_0x55be2c3a1ec0;  1 drivers
+L_0x7f199aa46060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55be2c3a1640_0 .net/2u *"_s4", 0 0, L_0x7f199aa46060;  1 drivers
+v0x55be2c3a1720_0 .net *"_s6", 32 0, L_0x55be2c3a1fe0;  1 drivers
+v0x55be2c3a1800_0 .net "a", 31 0, v0x55be2c3a1c00_0;  1 drivers
+v0x55be2c3a18e0_0 .net "b", 31 0, v0x55be2c3a1cc0_0;  1 drivers
+v0x55be2c3a19c0_0 .net "result", 31 0, L_0x55be2c3a2590;  alias, 1 drivers
+v0x55be2c3a1aa0_0 .net "sum", 32 0, L_0x55be2c3a2120;  1 drivers
+L_0x55be2c3a1ec0 .concat [ 32 1 0 0], v0x55be2c3a1c00_0, L_0x7f199aa46018;
+L_0x55be2c3a1fe0 .concat [ 32 1 0 0], v0x55be2c3a1cc0_0, L_0x7f199aa46060;
+L_0x55be2c3a2120 .arith/sub 33, L_0x55be2c3a1ec0, L_0x55be2c3a1fe0;
+L_0x55be2c3a2260 .part L_0x55be2c3a2120, 32, 1;
+L_0x55be2c3a2380 .part L_0x55be2c3a2120, 1, 32;
+L_0x55be2c3a2420 .part L_0x55be2c3a2120, 0, 32;
+L_0x55be2c3a2590 .functor MUXZ 32, L_0x55be2c3a2420, L_0x55be2c3a2380, L_0x55be2c3a2260, C4<>;
+    .scope S_0x55be2c381030;
+T_0 ;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v0x55be2c3a1c00_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x55be2c3a1cc0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 32;
+    %store/vec4 v0x55be2c3a1c00_0, 0, 32;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v0x55be2c3a1cc0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 1010, 0, 32;
+    %store/vec4 v0x55be2c3a1c00_0, 0, 32;
+    %pushi/vec4 1010, 0, 32;
+    %store/vec4 v0x55be2c3a1cc0_0, 0, 32;
+    %delay 10, 0;
+    %pushi/vec4 10101, 0, 32;
+    %store/vec4 v0x55be2c3a1c00_0, 0, 32;
+    %pushi/vec4 10000, 0, 32;
+    %store/vec4 v0x55be2c3a1cc0_0, 0, 32;
+    %end;
+    .thread T_0;
+    .scope S_0x55be2c381030;
+T_1 ;
+    %vpi_call 2 22 "$dumpfile", "subr.vcd" {0 0 0};
+    %vpi_call 2 23 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55be2c3811b0 {0 0 0};
+    %vpi_call 2 24 "$monitor", "time = %2d, abit = %31b, bbit = %31b, result = %16d", $time, v0x55be2c3a1c00_0, v0x55be2c3a1cc0_0, v0x55be2c3a1d90_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "test_sub_32bit.v";
+    "subt_32bit.v";

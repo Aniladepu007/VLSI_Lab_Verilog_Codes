@@ -1,0 +1,48 @@
+$date
+	Thu Sep 27 16:31:35 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_encoder_4_2 $end
+$var wire 2 ! ybit [1:0] $end
+$var reg 1 " ebit $end
+$var reg 4 # inbit [3:0] $end
+$scope module obj $end
+$var wire 1 " en $end
+$var wire 4 $ in [3:0] $end
+$var reg 2 % y [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+bx $
+bx #
+0"
+b0 !
+$end
+#10
+b1 #
+b1 $
+1"
+#20
+b1 !
+b1 %
+b10 #
+b10 $
+#30
+b10 !
+b10 %
+b100 #
+b100 $
+#40
+b11 !
+b11 %
+b1000 #
+b1000 $
+#60

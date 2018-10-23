@@ -1,0 +1,51 @@
+$date
+	Thu Oct 11 14:48:31 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_ter_mux $end
+$var wire 1 ! ybit $end
+$var reg 2 " inbit [1:0] $end
+$var reg 1 # sbit $end
+$scope module obj $end
+$var wire 2 $ in [1:0] $end
+$var wire 1 # s $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 $
+0#
+b0 "
+0!
+$end
+#10
+1#
+#20
+1!
+0#
+b1 "
+b1 $
+#30
+0!
+1#
+#40
+0#
+b10 "
+b10 $
+#50
+1!
+1#
+#60
+0#
+b11 "
+b11 $
+#70
+1#
+#80

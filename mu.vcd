@@ -1,0 +1,39 @@
+$date
+	Thu Oct 11 14:52:36 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mu_tb $end
+$scope module mu_tb $end
+$var wire 16 ! a [15:0] $end
+$var wire 16 " b [15:0] $end
+$var wire 17 # sum [16:0] $end
+$var wire 32 $ result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 $
+b0 #
+b0 "
+b1 !
+$end
+#10
+b1010 $
+b1010 #
+b1 "
+b1010 !
+#20
+b1100100 $
+b1100100 #
+b1010 "
+#30
+b1010010100101000 $
+b10011100010000 "
+b10100101001010000 #
+b10011101110101 !

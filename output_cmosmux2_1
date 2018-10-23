@@ -1,0 +1,126 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x556713902050 .scope module, "test_2_1mux" "test_2_1mux" 2 1;
+ .timescale 0 0;
+v0x556713922dd0_0 .var "abit", 0 0;
+v0x556713922e90_0 .var "bbit", 0 0;
+v0x556713922f60_0 .var "sel", 0 0;
+RS_0x7f19cb88e2b8 .resolv tri, L_0x5567139232f0, L_0x5567139236b0, L_0x5567139238d0, L_0x556713923aa0;
+v0x556713923060_0 .net8 "w", 0 0, RS_0x7f19cb88e2b8;  4 drivers, strength-aware
+S_0x5567139021d0 .scope module, "obj" "mux_2_1" 2 8, 3 1 0, S_0x556713902050;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "s"
+    .port_info 3 /OUTPUT 1 "y"
+L_0x556713923160 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x556713923200 .functor PMOS 1, L_0x556713923160, v0x556713922f60_0, C4<0>, C4<0>;
+L_0x5567139232f0 .functor PMOS 1, L_0x556713923200, L_0x556713923430, C4<0>, C4<0>;
+L_0x556713923430 .functor NOT 1, v0x556713922dd0_0, C4<0>, C4<0>, C4<0>;
+L_0x556713923540 .functor PMOS 1, L_0x556713923160, L_0x5567139235f0, C4<0>, C4<0>;
+L_0x5567139235f0 .functor NOT 1, v0x556713922f60_0, C4<0>, C4<0>, C4<0>;
+L_0x5567139236b0 .functor PMOS 1, L_0x556713923540, L_0x5567139237c0, C4<0>, C4<0>;
+L_0x5567139237c0 .functor NOT 1, v0x556713922e90_0, C4<0>, C4<0>, C4<0>;
+RS_0x7f19cb88e288 .resolv tri, L_0x556713923c10, L_0x556713923ba0;
+L_0x5567139238d0 .functor NMOS 1, RS_0x7f19cb88e288, L_0x556713923a30, C4<0>, C4<0>;
+L_0x556713923a30 .functor NOT 1, v0x556713922dd0_0, C4<0>, C4<0>, C4<0>;
+L_0x556713923aa0 .functor NMOS 1, RS_0x7f19cb88e288, v0x556713922f60_0, C4<0>, C4<0>;
+L_0x556713900600 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x556713923c10 .functor NMOS 1, L_0x556713900600, L_0x556713923c80, C4<0>, C4<0>;
+L_0x556713923c80 .functor NOT 1, v0x556713922e90_0, C4<0>, C4<0>, C4<0>;
+L_0x556713923ba0 .functor NMOS 1, L_0x556713900600, L_0x556713923e50, C4<0>, C4<0>;
+L_0x556713923e50 .functor NOT 1, v0x556713922f60_0, C4<0>, C4<0>, C4<0>;
+v0x556713902350_0 .net *"_s10", 0 0, L_0x5567139237c0;  1 drivers
+v0x5567139221d0_0 .net *"_s13", 0 0, L_0x556713923a30;  1 drivers
+v0x5567139222b0_0 .net *"_s17", 0 0, L_0x556713923c80;  1 drivers
+v0x5567139223a0_0 .net *"_s20", 0 0, L_0x556713923e50;  1 drivers
+v0x556713922480_0 .net *"_s4", 0 0, L_0x556713923430;  1 drivers
+v0x5567139225b0_0 .net *"_s7", 0 0, L_0x5567139235f0;  1 drivers
+v0x556713922690_0 .net "a", 0 0, v0x556713922dd0_0;  1 drivers
+v0x556713922750_0 .net "b", 0 0, v0x556713922e90_0;  1 drivers
+v0x556713922810_0 .net8 "gnd", 0 0, L_0x556713900600;  1 drivers, strength-aware
+v0x5567139228d0_0 .net "s", 0 0, v0x556713922f60_0;  1 drivers
+v0x556713922990_0 .net8 "vdd", 0 0, L_0x556713923160;  1 drivers, strength-aware
+v0x556713922a50_0 .net8 "w1", 0 0, L_0x556713923200;  1 drivers, strength-aware
+v0x556713922b10_0 .net8 "w2", 0 0, L_0x556713923540;  1 drivers, strength-aware
+v0x556713922bd0_0 .net8 "w3", 0 0, RS_0x7f19cb88e288;  2 drivers, strength-aware
+v0x556713922c90_0 .net8 "y", 0 0, RS_0x7f19cb88e2b8;  alias, 4 drivers, strength-aware
+    .scope S_0x556713902050;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922f60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922dd0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556713922e90_0, 0, 1;
+    %delay 20, 0;
+    %end;
+    .thread T_0;
+    .scope S_0x556713902050;
+T_1 ;
+    %vpi_call 2 32 "$dumpfile", "cmos_mux_2_1.vcd" {0 0 0};
+    %vpi_call 2 33 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x556713902050 {0 0 0};
+    %vpi_call 2 34 "$monitor", "time = %2d,      S =%1b,       A =%1b,   B =%1b,    Out =%1b", $time, v0x556713922f60_0, v0x556713922dd0_0, v0x556713922e90_0, v0x556713923060_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "cmos_mux_2_1_tb.v";
+    "cmos_mux_2_1.v";

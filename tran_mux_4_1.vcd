@@ -1,0 +1,157 @@
+$date
+	Thu Sep 20 16:14:11 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tran_mux_4_1 $end
+$var wire 1 ! w $end
+$var reg 1 " abit $end
+$var reg 1 # bbit $end
+$var reg 1 $ cbit $end
+$var reg 1 % dbit $end
+$var reg 1 & sel0 $end
+$var reg 1 ' sel1 $end
+$scope module obj $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 1 & s0 $end
+$var wire 1 ' s1 $end
+$var wire 1 ( w1 $end
+$var wire 1 ) w2 $end
+$var wire 1 ! y $end
+$scope module o1 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 & s $end
+$var wire 1 ( y $end
+$scope module o1 $end
+$var wire 1 " a $end
+$var wire 1 * ne $end
+$var wire 1 & pe $end
+$var wire 1 ( y $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 # a $end
+$var wire 1 & ne $end
+$var wire 1 + pe $end
+$var wire 1 ( y $end
+$upscope $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 & s $end
+$var wire 1 ) y $end
+$scope module o1 $end
+$var wire 1 $ a $end
+$var wire 1 , ne $end
+$var wire 1 & pe $end
+$var wire 1 ) y $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 % a $end
+$var wire 1 & ne $end
+$var wire 1 - pe $end
+$var wire 1 ) y $end
+$upscope $end
+$upscope $end
+$scope module o3 $end
+$var wire 1 ( a $end
+$var wire 1 ) b $end
+$var wire 1 ' s $end
+$var wire 1 ! y $end
+$scope module o1 $end
+$var wire 1 ( a $end
+$var wire 1 . ne $end
+$var wire 1 ' pe $end
+$var wire 1 ! y $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 ) a $end
+$var wire 1 ' ne $end
+$var wire 1 / pe $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1/
+1.
+1-
+1,
+1+
+1*
+1)
+0(
+0'
+0&
+1%
+1$
+0#
+0"
+0!
+$end
+#10
+0)
+0$
+1#
+#20
+0*
+0+
+0,
+0-
+1$
+0#
+0!
+0(
+1)
+1&
+#30
+0$
+1!
+1(
+1#
+#40
+0.
+0/
+1*
+1+
+1,
+1-
+1$
+0#
+1'
+1!
+0(
+1)
+0&
+#50
+0!
+0)
+0$
+1#
+#60
+0*
+0+
+0,
+0-
+1$
+0#
+0(
+1!
+1)
+1&
+#70
+0$
+1(
+1#
+#90

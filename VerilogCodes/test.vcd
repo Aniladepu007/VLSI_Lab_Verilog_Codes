@@ -1,0 +1,59 @@
+$date
+	Fri Aug 24 17:26:25 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module fulladdertb $end
+$var wire 1 ! out $end
+$var wire 1 " carryout $end
+$var reg 1 # carryin $end
+$var reg 1 $ input1 $end
+$var reg 1 % input2 $end
+$scope module uut $end
+$var wire 1 # cin $end
+$var wire 1 $ x $end
+$var wire 1 % y $end
+$var wire 1 " cout $end
+$var wire 1 ! A $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#200
+1!
+1$
+#400
+0!
+1"
+1%
+#600
+1!
+0"
+0$
+#800
+0!
+1"
+1#
+#1000
+1!
+0"
+0%
+#1200
+0!
+1"
+1$
+#1400
+1!
+1%
+#1800

@@ -1,0 +1,48 @@
+$date
+	Thu Oct 11 16:24:06 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_updown $end
+$var wire 8 ! out [7:0] $end
+$var reg 1 " clkbit $end
+$var reg 1 # enbit $end
+$var reg 1 $ flag $end
+$var reg 1 % resetbit $end
+$scope module obj $end
+$var wire 1 " clk $end
+$var wire 1 # en $end
+$var wire 1 & flag $end
+$var wire 1 % reset $end
+$var reg 8 ' count_out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx '
+z&
+1%
+1$
+0#
+1"
+bx !
+$end
+#1
+0%
+1#
+#3
+1%
+#255
+0"
+#258
+0$
+#510
+1"
+#513
+0#
+#518

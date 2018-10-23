@@ -1,0 +1,25 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x557d7b7fd550 .scope module, "test" "test" 2 1;
+ .timescale 0 0;
+    .scope S_0x557d7b7fd550;
+T_0 ;
+    %vpi_call 2 9 "$display", "1'bx <=10  %b", 1'b1 {0 0 0};
+    %vpi_call 2 10 "$display", "1'bx <=10  %b", 1'b0 {0 0 0};
+    %vpi_call 2 11 "$display", "1'bx <=10  %b", 1'b1 {0 0 0};
+    %vpi_call 2 13 "$display", " 4'bx001 <= 4'bx001  %b", 1'b0 {0 0 0};
+    %vpi_call 2 14 "$display", " 4'bx001 <= 4'bx001  %b", 4'bx001 {0 0 0};
+    %vpi_call 2 20 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "sample.v";

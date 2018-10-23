@@ -1,0 +1,47 @@
+$date
+	Wed Sep 19 22:48:09 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tgate_tb $end
+$var wire 1 ! y $end
+$var reg 1 " abit $end
+$var reg 1 # e $end
+$var reg 1 $ e1 $end
+$var reg 1 % w1 $end
+$var reg 1 & w2 $end
+$scope module obj $end
+$var wire 1 " a $end
+$var wire 1 # ne $end
+$var wire 1 $ pe $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x&
+x%
+1$
+0#
+0"
+z!
+$end
+#10
+0%
+#20
+1"
+#30
+0"
+0$
+0!
+1#
+1&
+#40
+1!
+1"
+#60

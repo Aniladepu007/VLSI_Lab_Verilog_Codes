@@ -1,0 +1,125 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x562f11a99850 .scope module, "tran_mux_2_1" "tran_mux_2_1" 2 1;
+ .timescale 0 0;
+v0x562f11aba7a0_0 .var "abit", 0 0;
+v0x562f11aba8b0_0 .var "bbit", 0 0;
+v0x562f11aba9c0_0 .var "sel", 0 0;
+RS_0x7f355e7f40a8 .resolv tri, L_0x562f11abab00, L_0x562f11abab70, L_0x562f11abadb0, L_0x562f11abae60;
+v0x562f11abaa60_0 .net8 "w", 0 0, RS_0x7f355e7f40a8;  4 drivers, strength-aware
+S_0x562f11a999d0 .scope module, "obj" "mux_2_1_tran" 2 8, 3 3 0, S_0x562f11a99850;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "s"
+    .port_info 3 /OUTPUT 1 "y"
+L_0x562f11abad00 .functor NOT 1, v0x562f11aba9c0_0, C4<0>, C4<0>, C4<0>;
+L_0x562f11abaf80 .functor NOT 1, v0x562f11aba9c0_0, C4<0>, C4<0>, C4<0>;
+v0x562f11aba3e0_0 .net "a", 0 0, v0x562f11aba7a0_0;  1 drivers
+v0x562f11aba4a0_0 .net "b", 0 0, v0x562f11aba8b0_0;  1 drivers
+v0x562f11aba570_0 .net "s", 0 0, v0x562f11aba9c0_0;  1 drivers
+v0x562f11aba690_0 .net8 "y", 0 0, RS_0x7f355e7f40a8;  alias, 4 drivers, strength-aware
+S_0x562f11a99ba0 .scope module, "o1" "tran_gate" 3 4, 4 1 0, S_0x562f11a999d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "ne"
+    .port_info 2 /INPUT 1 "pe"
+    .port_info 3 /OUTPUT 1 "y"
+L_0x562f11abab00 .functor NMOS 1, v0x562f11aba7a0_0, L_0x562f11abad00, C4<0>, C4<0>;
+L_0x562f11abab70 .functor PMOS 1, v0x562f11aba7a0_0, v0x562f11aba9c0_0, C4<0>, C4<0>;
+v0x562f11a99d70_0 .net "a", 0 0, v0x562f11aba7a0_0;  alias, 1 drivers
+v0x562f11ab9b10_0 .net "ne", 0 0, L_0x562f11abad00;  1 drivers
+v0x562f11ab9bd0_0 .net "pe", 0 0, v0x562f11aba9c0_0;  alias, 1 drivers
+v0x562f11ab9c70_0 .net8 "y", 0 0, RS_0x7f355e7f40a8;  alias, 4 drivers, strength-aware
+S_0x562f11ab9de0 .scope module, "o2" "tran_gate" 3 5, 4 1 0, S_0x562f11a999d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "ne"
+    .port_info 2 /INPUT 1 "pe"
+    .port_info 3 /OUTPUT 1 "y"
+L_0x562f11abadb0 .functor NMOS 1, v0x562f11aba8b0_0, v0x562f11aba9c0_0, C4<0>, C4<0>;
+L_0x562f11abae60 .functor PMOS 1, v0x562f11aba8b0_0, L_0x562f11abaf80, C4<0>, C4<0>;
+v0x562f11aba040_0 .net "a", 0 0, v0x562f11aba8b0_0;  alias, 1 drivers
+v0x562f11aba100_0 .net "ne", 0 0, v0x562f11aba9c0_0;  alias, 1 drivers
+v0x562f11aba1f0_0 .net "pe", 0 0, L_0x562f11abaf80;  1 drivers
+v0x562f11aba2c0_0 .net8 "y", 0 0, RS_0x7f355e7f40a8;  alias, 4 drivers, strength-aware
+    .scope S_0x562f11a99850;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba9c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba7a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562f11aba8b0_0, 0, 1;
+    %delay 20, 0;
+    %end;
+    .thread T_0;
+    .scope S_0x562f11a99850;
+T_1 ;
+    %vpi_call 2 32 "$dumpfile", "tran_mux_2_1.vcd" {0 0 0};
+    %vpi_call 2 33 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x562f11a99850 {0 0 0};
+    %vpi_call 2 34 "$monitor", "time = %2d,      S =%1b,       A =%1b,   B =%1b,    Out =%1b", $time, v0x562f11aba9c0_0, v0x562f11aba7a0_0, v0x562f11aba8b0_0, v0x562f11abaa60_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "test_mux_2_1_tran.v";
+    "mux_2_1_tran.v";
+    "./tran_gate.v";
